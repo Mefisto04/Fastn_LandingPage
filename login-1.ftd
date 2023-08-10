@@ -1,0 +1,92 @@
+
+-- ftd.column:
+background.solid: #010c15
+width.fixed.percent: 100
+height.fixed.percent: 100
+
+
+-- ftd.column:
+background.solid: #f0f0f0
+align-content: center
+spacing: space-evenly
+width.fixed.px: 350
+border-radius.px: 20
+padding.px: 30
+margin-horizontal.percent: 40 
+margin-top.rem: 15
+margin-bottom.rem: 20
+
+-- ftd.text:
+region: h2
+
+Login Page
+
+-- ftd.container:
+height.fixed.px: 35
+
+-- ftd.text-input:
+placeholder: Username
+width.fixed.percent: 100
+margin-vertical.px: 10
+padding-horizontal.px: 15
+padding-vertical.px: 15
+border-radius.px: 10
+border-color: #010c15
+border-bottom-width.px: 2
+
+-- ftd.text-input:
+border-radius.px: 10
+placeholder: Password
+width.fixed.percent: 100
+margin-vertical.px: 12
+padding-horizontal.px: 15
+padding-vertical.px: 15
+type: password
+border-color: #010c15
+border-bottom-width.px: 2
+
+-- ftd.text: forgot password
+width.fixed.percent: 100
+;; role: $forgotStyle
+text-align: start
+color: #0000bb
+region: h4
+
+
+-- ftd.text: Login
+color: #ffffff
+text-align: center
+width.fixed.percent: 60
+margin.px: 20
+padding-vertical.px: 13
+border-radius.px: 20
+background.solid: blue
+link: /index
+
+
+-- ftd.row:
+margin-vertical.px: 10
+
+-- ftd.text: New User : 
+;; role: $registerStyle
+color: #000000
+region: h4
+display: inline
+
+-- ftd.container:
+width.fixed.px: 5
+
+-- ftd.text: Register Here
+;; role: $registerStyle
+color: #0000ff
+display: inline
+link: /register
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+
+-- end: ftd.column
+
+
