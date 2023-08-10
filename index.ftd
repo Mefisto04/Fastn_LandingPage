@@ -1,0 +1,345 @@
+-- page:
+
+-- component page:
+
+
+-- ftd.column:
+width.fixed.percent: 100
+height: fill-container
+types: 
+colors: 
+background.solid: #010c15
+
+
+-- ftd.row:
+width: fill-container
+height: auto
+padding-vertical.px: 5
+border-bottom-width.px: 1
+border-bottom-color: #1E2D3D
+
+-- navbar:
+
+-- end: ftd.row
+
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+padding-horizontal.percent: 12  
+
+
+-- hero:
+
+-- template-holder:
+
+;; -- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: page
+
+
+
+-- component navbar:
+boolean $hover-home: false
+boolean $hover-about: false
+boolean $hover-components: false
+
+-- ftd.row:
+background.solid: #010c15
+margin.px: 0
+padding.px: 0
+width: fill-container
+height.fixed.px: 40
+
+-- ftd.text: FASTN
+color: #607B96
+align-self: center
+margin-left.percent: 7
+margin-right.percent: 64
+
+-- ftd.text: Home
+color: #607B96
+padding-vertical.px: 12
+padding-horizontal.px: 32
+border-color: #1E2D3D
+border-left-width.px: 1
+border-right-width.px: 1
+color if {navbar.hover-home}: #FCFCFC
+$on-mouse-enter$: $ftd.set-bool($a = $navbar.hover-home, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $navbar.hover-home, v = false)
+
+-- ftd.text: About
+color: #607B96
+padding-vertical.px: 12
+padding-horizontal.px: 32
+border-color: #1E2D3D
+border-left-width.px: 1
+border-right-width.px: 1
+color if {navbar.hover-about}: #FCFCFC
+$on-mouse-enter$: $ftd.set-bool($a = $navbar.hover-about, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $navbar.hover-about, v = false)
+
+-- ftd.text: Contact Me
+color: #607B96
+padding-vertical.px: 12
+padding-horizontal.px: 32
+border-color: #1E2D3D
+border-left-width.px: 1
+border-right-width.px: 1
+color if {navbar.hover-components}: #FCFCFC
+$on-mouse-enter$: $ftd.set-bool($a = $navbar.hover-components, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $navbar.hover-components, v = false)    
+link: components/
+
+-- end: ftd.row
+
+-- end: navbar
+
+
+
+
+
+
+
+
+
+-- component hero:
+
+
+-- ftd.row:
+;; width: fill-container
+width.fixed.percent: 100
+height: hug-content
+padding-vertical.px: 20
+spacing: space-between
+
+
+-- ftd.column:
+padding-top.rem: 10
+
+-- ftd.text: Welcome to My Showcase
+color: #E5E9F0
+region: h1
+
+-- ftd.text: Projects using **FASTN**
+color: #E5E9F0
+region: h2
+
+-- ftd.text: --- Loading More Projects
+color: grey
+margin-top.px: 15
+region: h3
+
+
+-- ftd.text:
+color: grey
+margin-top.px: 15
+region: h5
+
+fastn - Full-stack Web Development Made Easy
+ftd is a programming language for building user interfaces and content centric websites. ftd is easy to learn, especially for non programmers, but does not compromise on what you can build with it.
+fastn is a web-framework, a content management system, and an integrated development environment for ftd. fastn is a webserver, and compiles ftd to HTML/CSS/JS, and can be deployed on your server, or on fastn cloud by FifthTry.
+The quickest way to learn fastn is the short video course we have created expander, it takes you through the basics.
+
+-- end: ftd.column
+
+
+-- ftd.image:
+src: $assets.files.assets.robot.png
+width.fixed.rem: 40
+height.fixed.rem: 25
+
+-- end: ftd.row
+
+-- end: hero
+
+
+
+
+
+
+
+
+
+-- component template-holder:
+
+
+-- ftd.row:
+;; width: fill-container
+width.fixed.percent: 100
+;; height: auto
+height.fixed.vh: 55
+spacing: space-between
+region: h4
+
+-- template:
+cover: $assets.files.assets.image1.png
+cta-button: Login & Registration Page
+text: This is a static Login & Registration Page
+link: login-1/
+
+-- template:
+cover: $assets.files.assets.image2.png
+cta-button: Potfolio Website
+text: This is my Porfolio Website
+link: portfolio/
+
+-- template:
+cover: $assets.files.assets.image3.png
+cta-button: Instagram Post 
+text: This is Instagram Post of Fastn
+link: instagram/
+
+
+-- end: ftd.row
+
+-- end: template-holder
+
+-- component template:
+ftd.image-src cover:
+string cta-button:
+string text:
+string link:
+
+-- ftd.column:
+width.fixed.percent: 30
+
+
+-- ftd.column:
+padding.px: 10
+spacing: space-between
+border-radius.px: 8
+background.solid: #092A38
+
+-- ftd.image:
+src: $template.cover
+width.fixed.percent: 100
+align-self: center
+
+-- ftd.text: $template.cta-button
+color: black
+align-self: center
+padding-horizontal.px: 14
+padding-vertical.px: 10
+border-radius.px: 8
+margin-vertical.rem: 1.2 
+background.solid: #FFFFFF
+link: $template.link
+
+-- end: ftd.column
+
+
+-- ftd.text: $template.text
+color: #607B96
+padding-horizontal.px: 8
+padding-vertical.px: 16
+
+
+-- end: ftd.column
+
+-- end: template
+
+-- ftd.background-image bg-blur:
+src: $assets.files.assets.natural.png
+repeat: no-repeat
+position: center
+size: contain
+
+
+-- ftd.type fira-code-size-14-desktop:
+size.px: 14
+weight: 400
+
+
+-- ftd.type fira-code-size-14-mobile:
+size.px: 14
+weight: 400
+
+
+-- ftd.type fira-code-size-56-desktop:
+size.px: 56
+weight: 400
+
+
+-- ftd.type fira-code-size-56-mobile:
+size.px: 56
+weight: 400
+
+-- ftd.type fira-code-size-30-desktop:
+size.px: 30
+weight: 400
+
+
+-- ftd.type fira-code-size-30-mobile:
+size.px: 30
+weight: 400
+
+
+
+-- ftd.row:
+padding-horizontal.percent: 10
+padding-vertical.px: 10
+background.solid: #010c15
+width.fixed.percent: 100
+border-top-width.px: 1
+border-color: white
+
+-- ftd.image:
+src: $assets.files.assets.robot.png
+width.fixed.rem: 6
+height.fixed.rem: 5
+border-radius.px: 45
+
+-- ftd.column:
+color: white
+border-left-width.px: 3
+border-color: white
+
+-- ftd.text:
+padding-horizontal.rem: 5
+color: white
+
+fastn - Full-stack Web Development Made Easy
+ftd is a programming language for building user interfaces and content centric websites. ftd is easy to learn, especially for non programmers, but does not compromise on what you can build with it.
+fastn is a web-framework, a content management system, and an integrated development environment for ftd. fastn is a webserver, and compiles ftd to HTML/CSS/JS, and can be deployed on your server, or on fastn cloud by FifthTry.
+The quickest way to learn fastn is the short video course we have created expander, it takes you through the basics.
+Then checkout the frontend and backend sections of our documentation.
+
+-- ftd.row:
+padding-left.px: 10
+align-self: center
+
+-- ftd.image:
+src: linkedin.png
+width.fixed.rem: 2
+height.fixed.rem: 2
+margin-horizontal.rem: 1
+link : https://www.linkedin.com/in/mayur-kawale-15a2b2250/
+
+
+-- ftd.image:
+src: twitter.png
+width.fixed.rem: 2
+height.fixed.rem: 2
+margin-horizontal.rem: 1
+link: https://twitter.com/mayurk_04
+
+-- ftd.image:
+src: insta2.png
+width.fixed.rem: 2
+height.fixed.rem: 2
+margin-horizontal.rem: 1
+link: https://www.instagram.com/_mayur.kawale_/
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
